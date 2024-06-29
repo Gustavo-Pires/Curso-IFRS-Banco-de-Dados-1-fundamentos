@@ -1,27 +1,42 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{atbegshi} 
+\usepackage{atbegshi}
 \usepackage{float}
 \usepackage[table,xcdraw]{xcolor}
+\usepackage[portuguese]{babel}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\usepackage{titling}
 
-
-\title{Banco de Dados 1: fundamentos - Turma 2024A}
-\author{Gustavo Pires Bertaco}
-\date{Junho 2024}
+\title{\textbf{Banco de Dados 1: Fundamentos} \\ Turma 2024A}
+\author{}
+\date{}
 
 \begin{document}
 
-\maketitle
-
-\AtBeginShipoutNext{\tableofcontents}
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    {\huge\bfseries Banco de Dados 1: Fundamentos \\ Turma 2024A\par}
+    \vspace{2cm}
+    \begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Descrição do Curso]
+        \small Neste curso abordaremos os conceitos básicos de banco de dados, incluindo a modelagem relacional e normalização. Tais conceitos serão essenciais para que você prossiga nos estudos e comece a desenvolver programas que utilizem a linguagem SQL. O curso utiliza como base os materiais produzidos para Rede e-Tec Brasil e outros materiais complementares. O curso é organizado em quatro módulos, totalizando 20 horas.
+    \end{tcolorbox}
+    \vfill
+    {\Large Gustavo Pires Bertaco\par}
+    {\large Junho 2024\par}
+\end{titlepage}
 
 \newpage
-\\ 
-\\ 
+
+\renewcommand{\contentsname}{Sumário}
+\tableofcontents
+
 \newpage
 
 \section{Conceitos fundamentais}
@@ -775,7 +790,8 @@ Uma Entidade está na 3FN se nenhum de seus atributos possui dependência em rel
 Este material foi baseado em:
 
 FRANCO, Matheus. \textbf{Sistemas de Gerenciamento de Banco de Dados}. São João da Boa Vista: Instituto Federal de Educação, Ciência e Tecnologia de São Paulo/Rede e-Tec, 2013.
-\newline
+
+
 MACHADO, Felipe N. R. \textbf{Projeto de Banco de Dados}: Uma visão prática. São Paulo: Érica, 2004
 \end{document}
 
