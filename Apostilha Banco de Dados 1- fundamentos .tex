@@ -10,8 +10,15 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[portuguese]{babel}
 \usepackage{tcolorbox}
-\usepackage{lipsum}
+\usepackage{fancyhdr}
 \usepackage{titling}
+
+% Definindo cabeçalho e rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Banco de Dados 1: Fundamentos}
+\lhead{Gustavo Pires Bertaco}
+\rfoot{Página \thepage}
 
 \title{\textbf{Banco de Dados 1: Fundamentos} \\ Turma 2024A}
 \author{}
@@ -740,22 +747,20 @@ A 2FN diz que todos os atributos que não forem chave têm que ser dependentes d
 Inicialmente, observa-se a entidade que possui chave primária concatenada. Para aquelas que satisfazem esta condição, analisar se existe algum atributo ou conjunto de atributos com dependência direta à chave primária.
 
 \textbf{Remanejamento (código}, código\_funcionário, categoria\_funcional, lotação\_atual, data\_admissão, cidade, data\_preenchimento, questão1, questão2, questão3, questão4, questão5, questão6, questão7, resultado, justificativa, data\_resultado);
-\begin{itemize}
-    \begin{itemize}
-        \item Verifique que o campo categoria funcional, lotação atual e cidade devem permanecer na entidade Remanejamento, tendo em vista que, se, por acaso, se desejar buscar um formulário emitido há cinco anos, cujo funcionário alterou sua categoria funcional, lotação atual ou cidade, os dados que deverão aparecer no formulário preenchido há cinco anos devem ser o correspondente à categoria funcional, lotação atual ou cidade, preenchido antigamente, e não os dados novos.
-    \end{itemize}
+\begin{itemize}[label=--]
+    \item Verifique que o campo categoria funcional, lotação atual e cidade devem permanecer na entidade Remanejamento, tendo em vista que, se, por acaso, se desejar buscar um formulário emitido há cinco anos, cujo funcionário alterou sua categoria funcional, lotação atual ou cidade, os dados que deverão aparecer no formulário preenchido há cinco anos devem ser o correspondente à categoria funcional, lotação atual ou cidade, preenchido antigamente, e não os dados novos.
 \end{itemize}
 
-\begin{itemize}
+\begin{itemize}[label=--]
     \item Funcionário (\textbf{código}, nome, sexo, data\_nascimento);
-    \item Remanejamento/escolaridade (\textbf{código_remanejamento,_escolaridade}, grau);
-    \item Remanejamento/Cursos (\textbf{código_remanejamento,_cursos});
-    \item Remanejamento/experiências profissionais (\textbf{código remanejamento, experiências});
-    \item Remanejamento/atribuições desenvolvidas (\textbf{ódigo remanejamento,_ atribuições});
-    \item Remanejamento/setores que trabalhou (\textbf{código_remanejamento,_setor}, data\_entrada, data\_saída, motivo\_saída);
-    \item Remanejamento/atribuições que gostaria (\textbf{código_remanejamento,_ atribuições}, horário);
-    \item Remanejamento/setores-divisões-diretorias que gostaria (\textbf{código_remanejamento, setor});
-    \item Remanejamento/motivos descontentamento (\textbf{código_remanejamento,_motivos}, observações);
+    \item Remanejamento/escolaridade (\textbf{código\_remanejamento\_escolaridade}, grau);
+    \item Remanejamento/Cursos (\textbf{código\_remanejamento\_cursos});
+    \item Remanejamento/experiências profissionais (\textbf{código\_remanejamento\_experiências});
+    \item Remanejamento/atribuições desenvolvidas (\textbf{código\_remanejamento\_atribuições});
+    \item Remanejamento/setores que trabalhou (\textbf{código\_remanejamento\_setor}, data\_entrada, data\_saída, motivo\_saída);
+    \item Remanejamento/atribuições que gostaria (\textbf{código\_remanejamento\_atribuições}, horário);
+    \item Remanejamento/setores-divisões-diretorias que gostaria (\textbf{código\_remanejamento\_setor});
+    \item Remanejamento/motivos descontentamento (\textbf{código\_remanejamento\_motivos}, observações);
 \end{itemize}
 
 \subsection*{Aplicação da 3ª Forma Normal – 3FN}
